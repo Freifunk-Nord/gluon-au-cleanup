@@ -1,5 +1,9 @@
 #!/bin/sh
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
+
+# Path for wget to download the file with the router MAC as filename:
+UPD='http://[fd42:eb49:c0b5:4242::fd00]/ffffng-transfer'
+
 #this has to be done on the fastd-gateway:
 #for i in /home/fastform/fastdkeys/*; do echo $i;  \
 #  MAC=$(egrep "MAC" "$i" |cut -d\  -f3);  \
@@ -12,7 +16,7 @@ PATH=/usr/sbin:/usr/bin:/sbin:/bin
 
 OLDLAT="$(uci -q get gluon-node-info.@location[0].latitude)"
 MAC="$(uci get network.client.macaddr | tr \[a-z] [A-Z])"
-wget -q -6 http://0.update.ffnord/ffffng-transfer/$MAC -O /tmp/a
+wget -q -6 $UPD/$MAC -O /tmp/a
 source /tmp/a
 
 if [ $H ]; then 
