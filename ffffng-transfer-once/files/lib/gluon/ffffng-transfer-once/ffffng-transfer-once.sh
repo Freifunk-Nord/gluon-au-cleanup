@@ -14,7 +14,6 @@ UPD='http://[fd42:eb49:c0b5:4242::fd00]/ffffng-transfer'
 #  M="$(egrep "Monitoring: pending|Monitoring: aktiv" "$i" |cut -do -f1|cut -d \  -f2)"; \
 #  echo 'H="'"$H"'";LAT="'"$LAT"'";LON="'"$LON"'";O="'"$O$M"'"' > /var/www/html/opkg/ffffng-transfer/$MAC; done
 
-OLDLAT="$(uci -q get gluon-node-info.@location[0].latitude)"
 MAC="$(uci get network.client.macaddr | tr \[a-z] [A-Z])"
 wget -q -6 $UPD/$MAC -O /tmp/a
 source /tmp/a
