@@ -22,6 +22,7 @@ fi
 if [ $LAT ]; then
   uci set gluon-node-info.@location[0].latitude="$LAT"
   uci set gluon-node-info.@location[0].longitude="$LON"
+  uci set gluon-node-info.@location[0].share_location="1"
 fi
 if [ $O ]; then
   uci set gluon-node-info.@owner[0].contact="$O"
