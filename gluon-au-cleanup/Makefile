@@ -1,6 +1,6 @@
 include $(TOPDIR)/rules.mk
 
-PKG_NAME:=ffffng-transfer-once
+PKG_NAME:=gluon-au-cleanup
 PKG_VERSION:=4
 
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
@@ -13,7 +13,7 @@ PKG_CONFIG_DEPENDS += $(GLUON_I18N_CONFIG)
 define Package/$(PKG_NAME)
   SECTION:=gluon
   CATEGORY:=Gluon
-  TITLE:=transfers the data back from ffffng into the nodes
+  TITLE:=cleanup for autoupdater cfg file
   DEPENDS:=+gluon-core +micrond
 endef
 
