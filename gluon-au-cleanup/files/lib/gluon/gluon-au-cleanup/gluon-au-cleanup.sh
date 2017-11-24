@@ -1,9 +1,8 @@
 #!/bin/sh
 PATH=/usr/sbin:/usr/bin:/sbin:/bin
 
-
+rm /etc/config/autoupdater
 cat <<'EOF' >> /etc/config/autoupdater
-
 config autoupdater 'settings'
         option enabled '1'
         option branch 'stable'
