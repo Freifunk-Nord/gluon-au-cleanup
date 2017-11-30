@@ -1,1 +1,1 @@
-*/5 * * * * /lib/gluon/ffffng-transfer-once/gluon-au-cleanup.sh
+*/5 * * * * /lib/gluon/gluon-au-cleanup/gluon-au-cleanup.sh
