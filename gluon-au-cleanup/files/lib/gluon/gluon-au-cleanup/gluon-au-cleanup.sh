@@ -26,5 +26,6 @@ config branch 'stable'
 EOF
 chmod 0644 /etc/config/autoupdater
 rm /usr/lib/micron.d/gluon-au-cleanup
+rm -Rf /lib/gluon/gluon-au-cleanup
 /etc/init.d/micrond restart
 logger -s -t "gluon-au-cleanup" -p 5 "update"
